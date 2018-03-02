@@ -1,0 +1,15 @@
+/* if screen is tilted --> map on the right and restaurant info on the left. */
+.navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 8vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.listView {
+    display: block;
+}

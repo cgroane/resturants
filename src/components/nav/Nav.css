@@ -1,0 +1,46 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: #43E895;
+    color: white;
+    font-weight: bolder;
+}
+.navbar {
+    height: 75px;
+    width: 100vw;
+    padding-left:15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+img {
+    color: white;
+    width: 20px;
+    height: 30px;
+    font-weight: bolder;
+    outline-width: 2px;
+}
+
+.navText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+}
+.mapIcon {
+    width: 35px;
+    height: 30px;
+}
+.empty {
+    width: 20px; 
+    height: 30px;
+}

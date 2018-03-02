@@ -1,0 +1,30 @@
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+}
+.infoBar {
+    height: 60px;
+    background: rgb(52, 179, 121);
+    color: white;
+    padding-left: 12px;
+}
+.infoBar span {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.address {
+    margin-top: 16px;
+    display: block;
+    color: #2A2A2A;
+}
+.details-box {
+    margin-bottom: 26px;
+}
+.detailsTextContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
