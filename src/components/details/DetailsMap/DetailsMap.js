@@ -21,7 +21,6 @@ class DetailsMap extends Component {
     }
 
     render(){
-        console.log(google)
         return(
             <div className="mapBox" >
                     <div id="gmap" ref={ref => (this.gmap = ref)} />

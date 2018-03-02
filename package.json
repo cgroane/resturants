@@ -5,10 +5,12 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
+    "connect-with-transition-group": "^0.2.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "gsap": "^1.20.4",
     "react": "^16.2.0",
+    "react-addons-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",

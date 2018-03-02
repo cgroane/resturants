@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import connectWithTransitionGroup from 'connect-with-transition-group'
+import ReactTransitionGroup from 'react-addons-transition-group';
 // import functions
 import {getRestaurants, setLocation, setDistance, selectRestuarant} from './../../../ducks/reducer';
 import {updateRestaurants} from './../../../functions/googleMaps';
+
 
 //import components
 import ListItem from './../ListItem/ListItem';
@@ -11,10 +14,6 @@ import DetailsContainer from './../../details/DetailsContainer/DetailsContainer'
 class ListView extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            selectedRestaurant: null
-        }
-        this.selectRestaurant = this.selectRestaurant.bind(this)
     }
 
     componentDidMount() {
@@ -41,13 +40,6 @@ class ListView extends Component {
             console.log(this.props.selected)
         }
     }
-    
-    selectRestaurant(restaurant) {
-        this.setState({selectedRestaurant: restaurant})
-    }
-    deselect() {
-        this.setState({selectedRestaurant: {}})
-    }
 
     render() {
         // map into result card
@@ -70,21 +62,24 @@ class ListView extends Component {
             })
             
         } else {
-            var details = <DetailsContainer selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
+            // var details =   <ReactTransitionGroup>
+            //                         <DetailsContainer selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
+            //                 </ReactTransitionGroup>
             var restaurants = null;
         }
         return (
             <div className="listView" >
                 <div>
-                    {restaurants}
-                    
+                    {restaurants} 
                 </div>
-                <div>
-                {details}
-                    </div>
+                    {this.props.selectedRestaurant && 
+                            <ReactTransitionGroup component="div" >
+                                    <DetailsContainer selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
+                            </ReactTransitionGroup>}
+                {/* {details} */} 
             </div>
         )
     }
 }
 const mapStateToProps = state => state;
-export default connect(mapStateToProps, {getRestaurants, setLocation, setDistance, selectRestuarant}) (ListView)
+export default connectWithTransitionGroup(connect(mapStateToProps, {getRestaurants, setLocation, setDistance, selectRestuarant}) (ListView))
