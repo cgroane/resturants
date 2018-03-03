@@ -6,6 +6,7 @@ const SET_LOCATION = 'SET_LOCATION';
 const SET_DISTANCE = 'SET_DISTANCE';
 const SELECT_RESTAURANT = 'SELECT_RESTAURANT';
 const CLEAR_SELECTED = 'CLEAR_SELECTED';
+const SET_DEFAULT = 'SET_DEFAULT';
 
 const initialState = {
     restaurants: [],
@@ -27,6 +28,8 @@ export default function(state = initialState, action) {
         case SELECT_RESTAURANT: 
             return Object.assign({}, state, {selectedRestaurant: action.payload})
         case CLEAR_SELECTED:
+            return Object.assign({}, state, {selectedRestaurant: action.payload})
+        case SET_DEFAULT: 
             return Object.assign({}, state, {selectedRestaurant: action.payload})
         default:
             return state;

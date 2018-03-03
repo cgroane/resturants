@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 // import functions
 import {getRestaurants, setLocation, setDistance, selectRestuarant} from './../../../ducks/reducer';
 import {updateRestaurants} from './../../../functions/googleMaps';
@@ -8,13 +9,14 @@ import {updateRestaurants} from './../../../functions/googleMaps';
 import ListItem from './../ListItem/ListItem';
 import DetailsContainer from './../../details/DetailsContainer/DetailsContainer';
 
+import './ListView.css';
+
 class ListView extends Component {
     constructor(props) {
         super(props)
         this.state = {
             selectedRestaurant: null
         }
-        this.selectRestaurant = this.selectRestaurant.bind(this)
     }
 
     componentDidMount() {
@@ -26,7 +28,7 @@ class ListView extends Component {
                 }
                 this.props.setLocation(userLoc)  
             })
-            this.props.getRestaurants();
+            this.props.getRestaurants()
             console.log(this.props.selectedRestaurant)
         }
     }
@@ -70,17 +72,20 @@ class ListView extends Component {
             })
             
         } else {
-            var details = <DetailsContainer selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
-            var restaurants = null;
+            // var restaurants = null;
         }
         return (
             <div className="listView" >
                 <div>
-                    {restaurants}
+                     {restaurants}
                     
                 </div>
-                <div>
-                {details}
+                <div styles={'width: 100vw'} >
+                    {this.props.selectedRestaurant && 
+                    
+                    <DetailsContainer selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
+                }
+                {/* {details} */}
                     </div>
             </div>
         )
