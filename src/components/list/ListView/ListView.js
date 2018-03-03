@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Slider from 'react-slide-out';
 // import functions
 import {getRestaurants, setLocation, setDistance, selectRestuarant} from './../../../ducks/reducer';
 import {updateRestaurants} from './../../../functions/googleMaps';
@@ -7,7 +8,8 @@ import {updateRestaurants} from './../../../functions/googleMaps';
 //import components
 import ListItem from './../ListItem/ListItem';
 import DetailsContainer from './../../details/DetailsContainer/DetailsContainer';
-
+import 'react-slide-out/lib/index.css';
+import './ListView.css';
 class ListView extends Component {
     constructor(props) {
         super(props)
@@ -70,17 +72,20 @@ class ListView extends Component {
             })
             
         } else {
-            var details = <DetailsContainer selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
-            var restaurants = null;
+            // var restaurants = null;
         }
         return (
             <div className="listView" >
                 <div>
-                    {restaurants}
+                     {restaurants}
                     
                 </div>
-                <div>
-                {details}
+                <div styles={'width: 100vw'} >
+                    {this.props.selectedRestaurant && 
+                    
+                    <DetailsContainer selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
+                }
+                {/* {details} */}
                     </div>
             </div>
         )

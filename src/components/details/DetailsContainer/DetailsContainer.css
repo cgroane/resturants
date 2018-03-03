@@ -28,3 +28,6 @@
     justify-content: center;
     align-items: flex-start;
 }
+.slideModal {
+    width: 100%!important;
+}
