@@ -21,7 +21,7 @@ class DetailsContainer extends Component {
     render() {
         console.log(this.props.selectedRestaurant)
         return (
-            <Slider isOpen={this.props.selectedRestaurant} verticalOffset={{top: 75}} >
+            <Slider isOpen={this.props.selectedRestaurant} verticalOffset={{top: 75, width: 100}} >
                 <div className={`detailsContainer `} >
                 <DetailsMap selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
                 <div className="contentContainer" >

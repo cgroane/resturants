@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Slider from 'react-slide-out';
+
 // import functions
 import {getRestaurants, setLocation, setDistance, selectRestuarant} from './../../../ducks/reducer';
 import {updateRestaurants} from './../../../functions/googleMaps';
@@ -8,15 +8,15 @@ import {updateRestaurants} from './../../../functions/googleMaps';
 //import components
 import ListItem from './../ListItem/ListItem';
 import DetailsContainer from './../../details/DetailsContainer/DetailsContainer';
-import 'react-slide-out/lib/index.css';
+
 import './ListView.css';
+
 class ListView extends Component {
     constructor(props) {
         super(props)
         this.state = {
             selectedRestaurant: null
         }
-        this.selectRestaurant = this.selectRestaurant.bind(this)
     }
 
     componentDidMount() {
@@ -28,7 +28,7 @@ class ListView extends Component {
                 }
                 this.props.setLocation(userLoc)  
             })
-            this.props.getRestaurants();
+            this.props.getRestaurants()
             console.log(this.props.selectedRestaurant)
         }
     }

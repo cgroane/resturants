@@ -64,4 +64,6 @@
 .info-text-padding {
   padding-left:12px
 }
-
+.slideModal{
+  width: 100%!important
+}

@@ -21,6 +21,9 @@
     width:  0vw; */
 
 }
+.slideModal {
+    width: 100%!important;
+}
 
 @media screen and (min-width: 520px) {
     #gmap{
