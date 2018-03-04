@@ -1,6 +1,5 @@
 .mapBox {
     height: 40vh;
-    /* width: 100vw; */
 }
 #gmap {
     padding: 0;
@@ -11,7 +10,6 @@
     bottom: 0;
     left: 0;
     height: 40vh;
-    /* width: 100vw;  */
   }
   .detailsContainer {
     height: 100%;
@@ -33,7 +31,6 @@
     .detailsContainer {
         height: calc(100vh - 75px);
         width: 100vw;
-        display: flex;
         flex-direction: row;
         justify-content: space-between
     }
