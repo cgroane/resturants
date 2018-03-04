@@ -47,8 +47,4 @@
         height: calc(100vh - 75px);
         width: 50vw;
     }
-    .detailsContainer.expandDiv{
-        width: 50vw;
-    }
 }
-

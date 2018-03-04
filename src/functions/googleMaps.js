@@ -6,7 +6,6 @@ export function updateRestaurants(arr) {
     return arr.map((cur, ind) => {
         var self = this;
         var service = new google.maps.DistanceMatrixService();
-        // console.log(self.props.userLocation)
             service.getDistanceMatrix(
                 {
                     origins: [self.props.userLocation],
@@ -15,12 +14,10 @@ export function updateRestaurants(arr) {
                     travelMode: 'DRIVING'
                 }, (response, status) => {
                     if (status == 'OK') {
-                        // console.log(response)
                         cur.distance = response.rows[0].elements[0].distance.text;
                     }
                 }
             )
-            // console.log(cur)
             return cur;
     })
 }
@@ -119,7 +116,6 @@ export function initMap (mapDiv, obj) {
 
 export function setMarkers (mapDiv, obj, userLoc) {
          var self = this;
-         // console.log(cur)
          var marker = new google.maps.Marker({
              map: mapDiv,
              position: {lat:obj.location.lat, lng:obj.location.lng},
