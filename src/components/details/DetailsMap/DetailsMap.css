@@ -1,6 +1,5 @@
 .mapBox {
     height: 40vh;
-    /* width: 100vw; */
 }
 #gmap {
     padding: 0;
@@ -11,18 +10,11 @@
     bottom: 0;
     left: 0;
     height: 40vh;
-    /* width: 100vw;  */
   }
   .detailsContainer {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* transition: width 1s cubic-bezier(.54,.65,.54,.99);
-    width:  0vw; */
-
-}
-.slideModal {
-    width: 100%!important;
 }
 
 @media screen and (min-width: 520px) {
@@ -39,7 +31,6 @@
     .detailsContainer {
         height: calc(100vh - 75px);
         width: 100vw;
-        display: flex;
         flex-direction: row;
         justify-content: space-between
     }
@@ -47,8 +38,4 @@
         height: calc(100vh - 75px);
         width: 50vw;
     }
-    .detailsContainer.expandDiv{
-        width: 50vw;
-    }
 }
-

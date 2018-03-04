@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
 
+import {styleItem} from './style';
+
 import {selectRestuarant} from './../../../ducks/reducer';
 import './ListItem.css';
 
@@ -9,7 +11,8 @@ class ListItem extends Component {
     constructor(props){
         super(props);
     }
-    render() {  
+    render() {
+        // build restaurant object to pass props  
         const thisRestuarant = {
             name: this.props.name,
             backgroundImageURL: this.props.backgroundImageURL,
@@ -18,22 +21,7 @@ class ListItem extends Component {
             location: this.props.location,
             distance: this.props.distance
         }
-        var itemStyle = {
-            backgroundImage: `linear-gradient(to top, rgb(49,49,49) 0px, transparent, rgba(255,255,255, 0.3) 180px, transparent), url(${thisRestuarant.backgroundImageURL})`,
-            width: `100vw`,
-            height: `180px`,
-            color: `white`,
-            display: `flex`,
-            flexDirection: `row`,
-            alignItems: `flex-end`,
-            paddingBottom: `6px`,
-            paddingLeft: `12px`,
-            boxSizing: `border-box`,
-            backgroundRepeat: `no-repeat`,
-            backgroundPosition: `center`,
-            backgroundSize: `cover`
-
-        }
+        var itemStyle = styleItem(thisRestuarant)
         return (
             <div style={itemStyle} className="listItem" onClick={() => this.props.selectRestuarant(thisRestuarant)} >
                 <div className="listItemTextContainer" >

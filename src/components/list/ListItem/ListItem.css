@@ -1,0 +1,14 @@
+.listItem {
+    width: 100vw;
+    height: 180px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+}

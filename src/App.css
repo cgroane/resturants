@@ -52,7 +52,6 @@
 .itemCat {
   font-size: 12px;
   font-weight: normal;
-  
 }
 .listItemTextContainer{
   display: flex;
@@ -64,6 +63,13 @@
 .info-text-padding {
   padding-left:12px
 }
-.slideModal{
-  width: 100%!important
+@media screen and (min-width: 520px) {
+  .listView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .listItem {
+    width: 50vw;
+  }
 }

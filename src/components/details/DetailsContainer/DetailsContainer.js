@@ -19,7 +19,6 @@ class DetailsContainer extends Component {
 
     }
     render() {
-        console.log(this.props.selectedRestaurant)
         return (
             <Slider isOpen={this.props.selectedRestaurant} verticalOffset={{top: 75, width: 100}} >
                 <div className={`detailsContainer `} >
@@ -36,6 +35,9 @@ class DetailsContainer extends Component {
                             </span>
                             <span className="listItemTextContainer info-text-padding detailFont" >
                                 {this.props.selectedRestaurant.location.city}, {this.props.selectedRestaurant.location.state} {this.props.selectedRestaurant.location.zip}
+                            </span>
+                            <span className="listItemTextContainer info-text-padding detailFont" >
+                                {this.props.selectedRestaurant.distance}
                             </span>
                         </div>
                         <div className="details-box listItemTextContainer" >

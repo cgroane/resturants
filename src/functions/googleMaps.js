@@ -1,12 +1,11 @@
 import food from './../assets/Rpb_food_icon.svg'
 const google = window.google;
 
-
+// calculate distance
 export function updateRestaurants(arr) {
     return arr.map((cur, ind) => {
         var self = this;
         var service = new google.maps.DistanceMatrixService();
-        // console.log(self.props.userLocation)
             service.getDistanceMatrix(
                 {
                     origins: [self.props.userLocation],
@@ -15,15 +14,14 @@ export function updateRestaurants(arr) {
                     travelMode: 'DRIVING'
                 }, (response, status) => {
                     if (status == 'OK') {
-                        // console.log(response)
                         cur.distance = response.rows[0].elements[0].distance.text;
                     }
                 }
             )
-            // console.log(cur)
             return cur;
     })
 }
+
 export function initMap (mapDiv, obj) {
     this.map = new google.maps.Map(mapDiv, {
         zoom: 15,
@@ -112,14 +110,10 @@ export function initMap (mapDiv, obj) {
       });
         mapDiv.style.right = "0vw";
         mapDiv.style.top = "0vh";
-        // mapDiv.style.height = '80vh';
-        // mapDiv.style.window = '80vw';
-
 }
 
 export function setMarkers (mapDiv, obj, userLoc) {
          var self = this;
-         // console.log(cur)
          var marker = new google.maps.Marker({
              map: mapDiv,
              position: {lat:obj.location.lat, lng:obj.location.lng},
@@ -140,12 +134,4 @@ export function setMarkers (mapDiv, obj, userLoc) {
          marker.addListener('click', function() {
              infoWindow.open(self.map, marker)
          })
-        //  var userLocation = new google.maps.Marker({
-        //     map: mapDiv,
-        //     position: {
-        //         lat: userLoc.lat,
-        //         lng: userLoc.lng,
-        //         icon: 
-        //     }
-        //  })
  }
