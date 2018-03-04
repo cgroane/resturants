@@ -20,18 +20,6 @@ class ListItem extends Component {
         }
         var itemStyle = {
             backgroundImage: `linear-gradient(to top, rgb(49,49,49) 0px, transparent, rgba(255,255,255, 0.3) 180px, transparent), url(${thisRestuarant.backgroundImageURL})`,
-            width: `100vw`,
-            height: `180px`,
-            color: `white`,
-            display: `flex`,
-            flexDirection: `row`,
-            alignItems: `flex-end`,
-            paddingBottom: `6px`,
-            paddingLeft: `12px`,
-            boxSizing: `border-box`,
-            backgroundRepeat: `no-repeat`,
-            backgroundPosition: `center`,
-            backgroundSize: `cover`
 
         }
         return (

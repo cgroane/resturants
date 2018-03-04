@@ -66,3 +66,13 @@
 .slideModal{
   width: 100%!important
 }
+@media screen and (min-width: 520px) {
+  .listView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .listItem {
+    width: 50vw;
+  }
+}

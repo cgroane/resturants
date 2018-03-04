@@ -47,7 +47,7 @@ class ListView extends Component {
 
         return (
             <div>
-                <div>
+                <div className="listView" >
                      {restaurants}
                 </div>
                 <div styles={'width: 100vw'} >
