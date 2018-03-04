@@ -17,12 +17,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* transition: width 1s cubic-bezier(.54,.65,.54,.99);
-    width:  0vw; */
-
-}
-.slideModal {
-    width: 100%!important;
 }
 
 @media screen and (min-width: 520px) {

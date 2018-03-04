@@ -1,7 +1,7 @@
 import food from './../assets/Rpb_food_icon.svg'
 const google = window.google;
 
-
+// calculate distance
 export function updateRestaurants(arr) {
     return arr.map((cur, ind) => {
         var self = this;
@@ -21,6 +21,7 @@ export function updateRestaurants(arr) {
             return cur;
     })
 }
+
 export function initMap (mapDiv, obj) {
     this.map = new google.maps.Map(mapDiv, {
         zoom: 15,
@@ -109,9 +110,6 @@ export function initMap (mapDiv, obj) {
       });
         mapDiv.style.right = "0vw";
         mapDiv.style.top = "0vh";
-        // mapDiv.style.height = '80vh';
-        // mapDiv.style.window = '80vw';
-
 }
 
 export function setMarkers (mapDiv, obj, userLoc) {
@@ -136,12 +134,4 @@ export function setMarkers (mapDiv, obj, userLoc) {
          marker.addListener('click', function() {
              infoWindow.open(self.map, marker)
          })
-        //  var userLocation = new google.maps.Marker({
-        //     map: mapDiv,
-        //     position: {
-        //         lat: userLoc.lat,
-        //         lng: userLoc.lng,
-        //         icon: 
-        //     }
-        //  })
  }

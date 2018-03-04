@@ -11,7 +11,8 @@ class ListItem extends Component {
     constructor(props){
         super(props);
     }
-    render() {  
+    render() {
+        // build restaurant object to pass props  
         const thisRestuarant = {
             name: this.props.name,
             backgroundImageURL: this.props.backgroundImageURL,
