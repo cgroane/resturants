@@ -36,6 +36,9 @@ class DetailsContainer extends Component {
                             <span className="listItemTextContainer info-text-padding detailFont" >
                                 {this.props.selectedRestaurant.location.city}, {this.props.selectedRestaurant.location.state} {this.props.selectedRestaurant.location.zip}
                             </span>
+                            <span className="listItemTextContainer info-text-padding detailFont" >
+                                {this.props.selectedRestaurant.distance}
+                            </span>
                         </div>
                         <div className="details-box listItemTextContainer" >
                             <span className="info-text-padding detailFont" >
