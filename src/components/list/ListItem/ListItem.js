@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-
+import {css} from 'emotion';
 import {styleItem} from './style';
 
 import {selectRestuarant} from './../../../ducks/reducer';
@@ -30,12 +30,12 @@ class ListItem extends Component {
             location: this.props.location,
             distance: this.props.distance
         }
-        // var itemStyle = styleItem(thisRestuarant)
-        var itemStyle = {
-            backgroundImage: `linear-gradient(to top, rgb(49,49,49) 0px, rgba(255,255,255,0), rgba(255,255,255, 0.3) 180px, rgba(255,255,255,0)), url("${thisRestuarant.backgroundImageURL}")`
-        }
+        var itemStyle = css`
+            background-image: linear-gradient(to top, rgb(49,49,49) 0px, rgba(255,255,255,0), rgba(255,255,255, 0.3) 180px, rgba(255,255,255,0)), url("${thisRestuarant.backgroundImageURL}");
+            
+        `
         return (
-            <div style={itemStyle} className="listItem" onClick={() => this.props.selectRestuarant(thisRestuarant)} >
+            <div className={`listItem ${itemStyle}`} onClick={() => this.props.selectRestuarant(thisRestuarant)} >
                 <div className="listItemTextContainer" >
                     <div className="listItemText" >
                         <span className="itemName nameFont" >{this.props.name}</span>
@@ -51,5 +51,3 @@ class ListItem extends Component {
 }
 const mapStateToProps = state => state;
 export default connect(mapStateToProps, {selectRestuarant})(ListItem);
-
-// style card 
