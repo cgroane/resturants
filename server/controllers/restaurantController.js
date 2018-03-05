@@ -1,5 +1,5 @@
 const axios = require('axios');
-apiURL = 'https://s3.amazonaws.com/br-codingexams/restaurants.json'
+const apiURL = 'https://s3.amazonaws.com/br-codingexams/restaurants.json'
 
 module.exports = {
     getRestaurants: (req, res, next) => {
