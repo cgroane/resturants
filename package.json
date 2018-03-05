@@ -2,10 +2,14 @@
   "name": "br-app2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.11.4"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
     "emotion": "^9.0.2",
     "express": "^4.16.2",
     "gsap": "^1.20.4",
@@ -28,8 +32,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "engines": {
-    "node": "6.11.4"
-  },
+  
   "proxy": "http://localhost:3001"
 }
