@@ -1,7 +1,6 @@
 // media query should dictate horizontal vs vertical layout. 
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import Slider from 'react-slide-out';
 //import components
 import DetailsMap from './../DetailsMap/DetailsMap';
 
@@ -9,7 +8,6 @@ import DetailsMap from './../DetailsMap/DetailsMap';
 
 // import css
 import './DetailsContainer.css';
-import 'react-slide-out/lib/index.css';
 
 //import google maps
 const google = window.google;
@@ -20,7 +18,6 @@ class DetailsContainer extends Component {
     }
     render() {
         return (
-            <Slider isOpen={this.props.selectedRestaurant} verticalOffset={{top: 75, width: 100}} >
                 <div className={`detailsContainer `} >
                 <DetailsMap selectedRestaurant={this.props.selectedRestaurant} userLocation={this.props.userLocation} />
                 <div className="contentContainer" >
@@ -60,7 +57,6 @@ class DetailsContainer extends Component {
                     </div>
                 </div>
             </div>
-            </Slider>
         )
     }
 }
