@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import store from './store';
-import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -15,4 +14,4 @@ ReactDOM.render(
         </Provider>
     </BrowserRouter>, 
 document.getElementById('root'));
-registerServiceWorker();
+
