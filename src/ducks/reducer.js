@@ -39,7 +39,7 @@ export default function(state = initialState, action) {
 export function getRestaurants() {
     return {
         type: GET_RESTAURANTS,
-        payload: axios.get('/api/restaurants').then(response => response.data)
+        payload: axios.get('api/restaurants').then(response => response.data)
     }
 }
 
