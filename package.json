@@ -22,12 +22,15 @@
     "styled-components": "^3.1.6"
   },
   "scripts": {
-    "start": "node server/index.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "now-start": "node server/index.js",
+    "deploy": "now --public"
   },
-  "engines": {
-    "node": "6.11.4"
-  }
+  "now": {
+    "alias": "bottlerocket-lunch"
+  },
+  "proxy": "http://localhost:3001"
 }
