@@ -39,9 +39,13 @@ class DetailsContainer extends Component {
                         </div>
                         <div className="details-box listItemTextContainer" >
                             <span className="info-text-padding detailFont" >
-                                {this.props.selectedRestaurant.contact.formattedPhone}
+                                {   this.props.selectedRestaurant.contact ? 
+                                    this.props.selectedRestaurant.contact.formattedPhone
+                                    :
+                                    `No contact info available`}
                             </span>
                         </div>
+                        { this.props.selectedRestaurant.contact ? 
                         <div className="details-box listItemTextContainer" >
                             {this.props.selectedRestaurant.contact.twitter ?  
                             <span className="info-text-padding detailFont" >
@@ -54,6 +58,13 @@ class DetailsContainer extends Component {
                             }
                             
                         </div>
+                        :
+                        <div className="details-box listItemTextContainer" >
+                            <span className="info-text-padding detailFont" >
+                                No twitter handle available
+                            </span>
+                        </div>
+                        }                    
                     </div>
                 </div>
             </div>
