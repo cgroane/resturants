@@ -1,0 +1,67 @@
+{
+	"info": {
+		"name": "Endpoint Tests - BottleRocket Lunch",
+		"_postman_id": "15453d5b-9e12-e84d-14ac-8535a95040d1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/api/restaurants",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"const res = pm.response.json();",
+							"const req = pm.request.body",
+							"",
+							"pm.test('description of test here', function() {",
+							"  // What we want tested here",
+							"  pm.response.to.have.status(200)",
+							"})",
+							"pm.test('Response should be an array', function() {",
+							"    pm.expect(Array.isArray(res)).to.eql(true);",
+							"})",
+							"",
+							"pm.test('Response should have a length of 15', function() {",
+							"    pm.expect(res.length).to.equal(15)",
+							"})",
+							"pm.test('Response item one should have name Hoppdoddy Burger Bar', function () {",
+							"    pm.expect(res[0].name).to.equal('Hopdoddy Burger Bar')",
+							"})"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deals\": [ {\n\t\t\"id\": 4,\n\t\t\"title\": \"sfas\",\n\t\t\"details\": \"5-8pm\",\n\t\t\"days\": [\"Monday\", \"Tuesday\"],\n\t\t\"restaurant\": {\n\t\t\"name\": \"Mot Hai Bai\",\n\t\t\"addressOne\": \"6047 Lewis St\",\n\t\t\"city\": \"Dallas\",\n\t\t\"state\": \"TX\",\n\t\t\"zip\": 75206\n\t\t},\n\t\t\"location\": {\n\t\t\t\"lat\": 32.823761,\n            \"lng\": -96.770303\n\t\t}\n\t}],\n\t\"userLocation\": {\n\t\t\"lat\": 32.813085,\n\t\t\"lng\": -96.762331\n\t}\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"restaurants"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
