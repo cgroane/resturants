@@ -10,7 +10,7 @@ app.use(express.static(`${__dirname}/../build`));
 
 const restCtrl = require('./controllers/restaurantController');
 
-app.get('https://s3.amazonaws.com/br-codingexams/restaurants.json', restCtrl.getRestaurants);
+app.get('/api/restaurants', restCtrl.getRestaurants);
 
 app.listen(port, () => {
     console.log(`Listening on port: ${port}`)
