@@ -1,20 +1,13 @@
 //  initiate map
 import React, {Component} from 'react';
-import {connect} from 'react-redux'
 //import functions
 import {initMap, setMarkers} from './../../../functions/googleMaps';
 import './DetailsMap.css'
 
-// instantiate google
-const google = window.google;
 
 class DetailsMap extends Component {
     constructor(props){
         super(props);
-
-    }
-    componentWillMount() {
-        
     }
     componentDidMount() {
         if (this.props.selectedRestaurant){
