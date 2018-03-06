@@ -8,7 +8,7 @@ const port = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(bodyParser.json());
-const port = 3001;
+
 app.use(express.static(`${__dirname}/../build`));
 
 const restCtrl = require('./controllers/restaurantController');
