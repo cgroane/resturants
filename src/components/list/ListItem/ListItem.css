@@ -2,12 +2,25 @@
     width: 100vw;
     height: 180px;
     color: white;
+    box-sizing: border-box;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    box-sizing: border-box;
+    padding-bottom: 12px;
+    padding-left: 6px;
+    background-image: linear-gradient(to top, rgb(49,49,49) 0px, rgba(255,255,255,0), rgba(255,255,255, 0.3) 180px, rgba(255,255,255,0)), url("http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png")
+}
+.overlayContainer {
+    width: 100%;
+    height: 180px;
+    z-index: 9;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-bottom: 12px;
+    padding-left: 6px;
+}
+.backgroundProps {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

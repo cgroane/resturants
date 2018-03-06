@@ -27,8 +27,9 @@ class ListItem extends Component {
         var itemStyle = {
                 backgroundImage: `linear-gradient(to top, rgb(49,49,49) 0px, rgba(255,255,255,0), rgba(255,255,255, 0.3) 180px, rgba(255,255,255,0)), url("${thisRestuarant.backgroundImageURL}")`
             }
+
         return (
-            <div style={itemStyle} className="listItem" onClick={() => this.props.selectRestuarant(thisRestuarant)} >
+            <div className="listItem backgroundProps" onClick={() => this.props.selectRestuarant(thisRestuarant)} >
                 <div className="listItemTextContainer" >
                     <div className="listItemText" >
                         <span className="itemName nameFont" >{this.props.name}</span>
