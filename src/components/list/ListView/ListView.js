@@ -45,9 +45,7 @@ class ListView extends Component {
         // map into result card
         if (!this.props.selectedRestaurant){
             var restaurants = mapToCard(this.props.restaurants)
-        } else {
-            var restaurants = null;
-        }
+        } 
         return (
             <div>
                 <div className="listView" >
