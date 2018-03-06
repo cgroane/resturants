@@ -8,7 +8,7 @@
     align-items: flex-end;
     padding-bottom: 12px;
     padding-left: 6px;
-    background-image: linear-gradient(to top, rgb(49,49,49) 0px, rgba(255,255,255,0), rgba(255,255,255, 0.3) 180px, rgba(255,255,255,0)), url("http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png")
+    background-image: url("http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png")
 }
 .overlayContainer {
     width: 100%;
